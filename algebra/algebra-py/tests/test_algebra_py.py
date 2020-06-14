@@ -1,4 +1,4 @@
-from algebra_py import __version__, Monoid
+from algebra_py import __version__, Monoid, Z
 
 
 def test_version():
@@ -15,3 +15,10 @@ def test_A_mul():
     b = A(10)
     assert (a*b).data == 50
 
+def test_z():
+    a = Z(10)
+    b = Z(22)
+    assert a.identity() == Z(1)
+    assert a.zero() == Z(0)
+    assert a + b == Z(32)
+    assert a * b == Z(220)
