@@ -1,0 +1,6 @@
+BasedOnStyle: Chromium
+BraceWrapping:
+  AfterNamespace: true
+CompactNamespaces: false
+FixNamespaceComments: false
+NamespaceIndentation: All
