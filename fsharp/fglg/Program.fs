@@ -229,8 +229,8 @@ let main argv =
   printfn "3*E:\n%s" ((3 * E).ToString())
   printfn "E*3:\n%s" ((E * 3).ToString())
   printfn "E**-1:\n%s" ((E .** (-1)).ToString())
-  printfn "E*E^-1:\n%s" ((E * (E .** (-1))).ToString())
+  printfn "E*E**-1:\n%s" ((E * (E .** (-1))).ToString())
   printfn "E**3:\n%s" ((E .** 3).ToString())
   printfn "E*E*E:\n%s" ((E * E * E).ToString())
-  printfn "E**3 == E*E*E ? %A" ((E * E) = (E .** 2))
+  printfn "E**3 == E*E*E ? %A" ((E * E * E) = (E .** 3))
   0 // return an integer exit code
