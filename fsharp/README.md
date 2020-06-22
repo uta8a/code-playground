@@ -29,4 +29,6 @@ yay -S dotnet-sdk
 
 *__neg__
 ```
-
+# Reference
+- https://gitlab.com/zer0pts/zer0pts-ctf-2020/-/blob/master/nibelung/distfiles/fglg.py
+  - zer0pts CTF nibelung fglg.py
