@@ -19,3 +19,23 @@
 - 演算子の実装
 - x.終わりに
 - sqrtの実装、普通の電卓にする
+
+# 追加でやってみる
+- 中間言語として、アセンブリに変換してみる
+- RISC-Vでやってみるとか？
+- 言語処理関係ないけどまあええか
+- RISC-V
+```
+git clone --recursive <gnu-toolchain>
+./configure --prefix=/usr/local/bin/
+make linux
+```
+- gnu-toolchainの導入。これで`riscv64-unknown-elf-*`が使えるようになる
+- めっちゃクローンに時間かかる
+- configureは時間かからないけど、makeには時間がかかる RV64GC 向けでやってみた
+- RISC-Vでいきなりは難しそう。まずはx86\_64でやってみる？
+
+
+# x86\_64.c
+- stackに値が残ったままだとセグフォする
+- `idiv`には`cdq`が大事。後で調べておく
