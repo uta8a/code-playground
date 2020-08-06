@@ -62,7 +62,7 @@ struct Stack *eval(char *tok, struct Stack *stack) {
     printf("  pop rdi\n");
     printf("  pop rax\n");
     printf("  mov rbx, rdi\n");
-    printf("  cdq\n");
+    printf("  cqo\n");
     printf("  idiv rbx\n");
     printf("  push rax\n");
     return push(x / y, stack);
