@@ -43,3 +43,4 @@ String.Format("Error: %A", e) // "Error: %A"
   - これErrorの扱い(ErrorChain的なこと)に関わりそう https://gist.github.com/mrange/1d2f3a26ca039588726fd3bd43cc8df3
   - https://stackoverflow.com/questions/43437412/use-bind-to-chain-continuous-functions
   - Resultのエラーかつエラーのとき合成っぽいことしてるな `@`
+  - errorhandleでかなり進歩。
