@@ -6,9 +6,17 @@ open System.IO
 
 exception IoError of string
 
+type MyError =
+    | A of Exception
+
 type Either<'E, 'U> =
     | Left of 'E
     | Right of 'U
+
+let handleError (e: exn) = 
+    match e with
+        | IoError e -> String.Format("{0}", e)
+        | _ -> "Unknown Error"
 
 let input =
     function
@@ -20,10 +28,10 @@ let input =
 let eval (input) =
     let result =
         match input with
-        | Left (e: exn) -> String.Format("Error: {0}", e)
+        | Left (e: exn) -> e |> handleError
         | Right (res: string list) -> String.Format("Result: {0}", res)
 
-    result |> printfn "%A"
+    result |> printfn "%s"
 
 [<EntryPoint>]
 let main argv =

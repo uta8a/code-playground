@@ -29,6 +29,7 @@ String.Format("Error: %A", e) // "Error: %A"
 - eでもいけるが、エラーメッセージがFilePathに関するものではない
 - エラーメッセージを引き継ぐみたいなのできないのかな...
 - assertもエラーメッセージ改善したい
+- handleErrorで改善。エラーが足し算の形になっているときは、Error eをhandleError関数をつくってそこに渡して特定エラーのときにmatchさせるとよい。
 
 ## log
 - 2020/11/03
@@ -37,3 +38,8 @@ String.Format("Error: %A", e) // "Error: %A"
   - Option/Resultは標準っぽい。Resultを使えばよさそうだけど、ここは敢えてEitherを定義して使ってみようか。
   - LeftがSomeっぽい気がするけど、Scalaに従いLeftをNoneにする。[ref. A Scala Either, Left, and Right example (like Option, Some, and None)](https://alvinalexander.com/scala/scala-either-left-right-example-option-some-none-null/)
   - 例外処理周りでEither使えたけど、メッセージの引き継ぎみたいなわからないところが多い。
+  - https://github.com/fsprojects/awesome-fsharp awesomeを見つけた。例を見ていく
+  - あまりよさげなawesomeではなかった
+  - これErrorの扱い(ErrorChain的なこと)に関わりそう https://gist.github.com/mrange/1d2f3a26ca039588726fd3bd43cc8df3
+  - https://stackoverflow.com/questions/43437412/use-bind-to-chain-continuous-functions
+  - Resultのエラーかつエラーのとき合成っぽいことしてるな `@`
