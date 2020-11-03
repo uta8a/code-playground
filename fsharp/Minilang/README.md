@@ -46,3 +46,4 @@ String.Format("Error: %A", e) // "Error: %A"
   - errorhandleでかなり進歩。
   - ファイル分割したらLib内で集約して、それをTestに持っていく。
   - ディレクトリ分割もまぁまぁ納得行く形になったのでOK
+  - 各ディレクトリで `dotnet run` `dotnet test`すれば動く
