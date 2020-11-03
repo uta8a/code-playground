@@ -1,9 +1,12 @@
-arg = "default"
-target = "Program.fs"
+arg = "default" # Project Directory Name
+target = "Program.fs" # path to file for fmt
 new:
-	@dotnet-sdk.dotnet new console -lang="F#" -o ./${arg}
+	@dotnet new console -lang="F#" -o ./${arg}
 	@cp .gitignore ./${arg}/.gitignore
+	@cd ./${arg} && dotnet new nunit -lang="F#" --force
 run:
-	@dotnet-sdk.dotnet run --project ./${arg}
+	@cd ./${arg} && dotnet run
+test:
+	@cd ./${arg} && dotnet test
 fmt:
 	@fantomas ./${target}
